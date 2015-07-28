@@ -1,0 +1,23 @@
+h1{
+	color: purple;
+    padding: 15px;
+}
+
+li span{
+  padding-left: 10px;
+}
+
+#itemForm{
+  padding: 10px 15px;
+}
+
+.list-group{
+  padding: 0px 15px;
+}
+
+#dltBtn{
+  padding-left: 10px;
+  width: 30px;
+  height: 16px;
+  
+}
