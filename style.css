@@ -1,6 +1,10 @@
+body{
+  background-color: #DF514C
+}
 h1{
-	color: purple;
+	color: #fff;
     padding: 15px;
+    text-align: center;
 }
 
 li span{
@@ -14,4 +18,3 @@ li span{
 .list-group{
   padding: 0px 15px;
 }
-

@@ -48,17 +48,20 @@ function populate() {
     //------------Check Box------------
         var cb = document.createElement( "input" );//create checkbox
           cb.type = "checkbox";
+          //cb.setAttribute("class", "fa fa-check-square" );
           cb.id = "cb" + i;
           cb.onclick = checkFunc;
         var span = document.createElement("span");//create text area
-        span.innerText = arr[i];//add array item to span
-        span.id = "itm" + i;
+          span.innerText = arr[i];//add array item to span
+          span.id = "itm" + i;
     
     //------------Delete Button--------
         var dlt = document.createElement("button");//create delete button
           dlt.type = "button";
-          dlt.setAttribute("class", "fa fa-remove");
+          dlt.setAttribute("class", "fa fa-trash" );
           dlt.setAttribute("style", "margin: 10px");
+          dlt.setAttribute("style", "float:right" );
+          //dlt.style.visibility='hidden';
           //var text = document.createTextNode("Delete"); // Create a text node
           //dlt.appendChild(text); //adds the text to the button
           //dlt.innerHTML = "Delete"; //sets button text to Delete
@@ -68,7 +71,9 @@ function populate() {
      //-----------Edit Button----------
      var edt = document.createElement("button");//create edit button
        edt.type = "button";
-       edt.setAttribute("class", "fa fa-pencil");
+       edt.setAttribute("class", "fa fa-pencil" );
+       edt.setAttribute("style", "float:right" );
+       //edt.style.visibility='hidden';
        //edt.setAttribute("style", "margin: 10px");
        edt.onclick = edtFunc;
        edt.id = "ed" + i;
@@ -77,9 +82,9 @@ function populate() {
     //------------List Items-----------
         item.className = "list-group-item"; //this class is for Bootstrap
         item.appendChild(cb);
+        item.appendChild(span);
         item.appendChild(dlt);
         item.appendChild(edt);
-        item.appendChild(span);
         items.appendChild(item);
   } // end of for loop
 } // end of populate function
@@ -95,7 +100,7 @@ form.addEventListener("submit", function (evt){//This runs when the Submit butto
         console.log(arr);
         evt.preventDefault();//This stops the submit button from refreshing the page.
   
-          
+    form.reset();      
     populate();     
  }
 });
